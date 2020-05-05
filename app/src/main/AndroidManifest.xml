@@ -14,8 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.PreferencesActivity"
+            android:label="@string/label_activity_preferences"/>
+
+        <activity
             android:name=".activity.BlackListActivity"
-            android:label="@string/label_activity_blacklist"/>
+            android:label="@string/label_activity_blacklist" />
 
         <service
             android:name=".service.VolumeAccessibilityService"
