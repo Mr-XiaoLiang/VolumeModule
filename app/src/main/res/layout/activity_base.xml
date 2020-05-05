@@ -32,7 +32,6 @@
             android:layout_marginStart="10dp"
             android:textColor="@color/actionIconColor"
             android:textSize="20sp"
-            android:text="@string/app_name"
             android:gravity="center_vertical"/>
 
         <HorizontalScrollView

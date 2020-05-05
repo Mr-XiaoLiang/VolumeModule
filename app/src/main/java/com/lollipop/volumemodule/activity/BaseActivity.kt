@@ -27,6 +27,7 @@ abstract class BaseActivity: AppCompatActivity() {
         setContentView(R.layout.activity_base)
         initRootGroup(rootGroup)
         layoutInflater.inflate(layoutId, contentGroup, true)
+        titleView.text = title
     }
 
     private fun initRootGroup(group: View) {
@@ -86,6 +87,7 @@ abstract class BaseActivity: AppCompatActivity() {
             val icon = layoutInflater.inflate(R.layout.btn_action, actionGroup, false)
             icon.findViewById<ImageView>(R.id.actionBtn)?.setImageResource(iconId)
             icon.tag = id
+            icon.setOnClickListener(click)
             actionGroup.addView(icon)
         }
     }
