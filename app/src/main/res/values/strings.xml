@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">音量模块</string>
+    <string name="accessibility_description">这种音量模块拦截系统音量调整所必须要服务权限，开启后将会拦截并且替换系统的音量按键操作。\n如果你对此权限不放心，那么不建议开启，但是你也将不能使用本应用提供的服务。</string>
+    <string name="volume_service">音量模块服务</string>
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='VolumeModule'
+include ':app', ':lPreference'

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="T1">#000000</color>
+    <color name="T2">#333333</color>
+    <color name="T3">#666666</color>
+    <color name="T4">#999999</color>
+    <color name="T5">#BBBBBB</color>
+    <color name="T6">#DDDDDD</color>
+    <color name="TF">#FFFFFF</color>
+    <array name="def_colors">
+        <item>#bf242a</item>
+        <item>#96514d</item>
+        <item>#e6b422</item>
+        <item>#006e54</item>
+        <item>#895b8a</item>
+        <item>#fdeff2</item>
+        <item>#00a381</item>
+        <item>#f5b1aa</item>
+        <item>#8b968d</item>
+        <item>#5c9291</item>
+        <item>#bc64a4</item>
+        <item>#c8c2c6</item>
+        <item>#47585c</item>
+        <item>#bce2e8</item>
+        <item>#ec6d71</item>
+        <item>#008899</item>
+        <item>#dccb18</item>
+        <item>#5383c3</item>
+        <item>#69821b</item>
+        <item>#f08300</item>
+        <item>#8491c3</item>
+        <item>#6b7b6e</item>
+        <item>#f19072</item>
+        <item>#180614</item>
+        <item>#005243</item>
+        <item>#55295b</item>
+        <item>#f8b500</item>
+        <item>#bb5548</item>
+    </array>
+</resources>

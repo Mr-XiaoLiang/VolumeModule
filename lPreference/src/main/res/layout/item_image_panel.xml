@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lollipop.lpreference.view.SquareLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:src="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.lollipop.lpreference.view.CirclePointView
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:id="@+id/numberView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8000"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/checkedIconView"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_done_black_24dp"
+        android:tint="@android:color/white"
+        android:scaleType="center"/>
+
+</com.lollipop.lpreference.view.SquareLayout>

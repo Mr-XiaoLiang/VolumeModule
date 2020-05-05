@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/palettePanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:elevation="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.lollipop.lpreference.view.TransparencyPaletteView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/huePalette"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/transparencyPalette"
+        android:layout_width="0px"
+        android:layout_height="30dp"/>
+
+    <com.lollipop.lpreference.view.HuePaletteView
+        android:id="@+id/huePalette"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/transparencyPalette"
+        android:layout_width="30dp"
+        android:layout_height="260dp"/>
+
+    <com.lollipop.lpreference.view.SatValPaletteView
+        android:id="@+id/satValPalette"
+        app:layout_constraintLeft_toLeftOf="@id/transparencyPalette"
+        app:layout_constraintTop_toBottomOf="@id/transparencyPalette"
+        app:layout_constraintRight_toRightOf="@id/transparencyPalette"
+        app:layout_constraintBottom_toBottomOf="@id/huePalette"
+        android:layout_marginTop="10dp"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:tint="@android:color/white"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:scaleType="center"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="@id/definiteBtn"
+        app:layout_constraintBottom_toBottomOf="@id/definiteBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintDimensionRatio="1:1"/>
+
+    <com.lollipop.lpreference.view.CirclePointView
+        android:id="@+id/previewColorView"
+        app:layout_constraintTop_toTopOf="@id/definiteBtn"
+        app:layout_constraintBottom_toBottomOf="@id/definiteBtn"
+        app:layout_constraintLeft_toRightOf="@id/backBtn"
+        app:layout_constraintRight_toLeftOf="@id/definiteBtn"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_goneMarginStart="0dp"/>
+
+    <com.lollipop.lpreference.view.CirclePointView
+        android:id="@+id/colorValueView"
+        android:textColor="@android:color/white"
+        android:background="#8000"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/previewColorView"
+        app:layout_constraintRight_toRightOf="@id/previewColorView"
+        app:layout_constraintTop_toTopOf="@id/previewColorView"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/definiteBtn"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_done_black_24dp"
+        android:tint="@android:color/white"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/satValPalette"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

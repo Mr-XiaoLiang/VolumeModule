@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:visibility="invisible"
+        android:src="@drawable/ic_folder_open_black_24dp"
+        android:scaleType="fitXY"
+        android:id="@+id/statusView"
+        android:tint="@android:color/white"
+        android:alpha="0.3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="@id/imagesGroup"
+        app:layout_constraintBottom_toBottomOf="@id/imagesGroup"
+        app:layout_constraintLeft_toLeftOf="@id/imagesGroup"
+        app:layout_constraintRight_toRightOf="@id/imagesGroup"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imagesGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/sizeView"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_preference_icon"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="24sp"
+        android:minWidth="52dp"
+        android:minHeight="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="invisible"
+        android:id="@+id/floatingImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"
+        android:elevation="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/black">
+        <com.lollipop.lpreference.view.SquareLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/previewView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.lollipop.lpreference.view.SquareLayout>
+        <ImageView
+            android:id="@+id/closePreviewBtn"
+            android:background="@drawable/bg_preference_icon"
+            android:scaleType="center"
+            android:src="@drawable/ic_close_black_24dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_margin="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
