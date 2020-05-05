@@ -1,6 +1,7 @@
 package com.lollipop.volumemodule.util
 
 import android.content.Context
+import com.lollipop.volumemodule.R
 import com.lollipop.volumemodule.provider.BaseProvider
 import com.lollipop.volumemodule.provider.ProviderController
 import com.lollipop.volumemodule.volume.VolumeController
@@ -24,6 +25,11 @@ object ProviderFactory {
                        controller: VolumeController,
                        providerController: ProviderController): BaseProvider {
         TODO()
+    }
+
+    fun getNameByType(type: Int): Int {
+        // TODO
+        return R.string.app_name
     }
 
 }

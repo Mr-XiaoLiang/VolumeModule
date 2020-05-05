@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/previewBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/previewBodyBackground"
+                android:minHeight="180dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/previewTitleBackground">
+
+                <TextView
+                    android:id="@+id/previewTitleView"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/previewTitleText"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/previewSettingBtn"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings_black_24dp"
+                    android:textColor="@color/previewTitleText"
+                    android:tint="@color/previewTitleIcon" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

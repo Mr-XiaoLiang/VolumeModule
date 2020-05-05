@@ -8,4 +8,9 @@
     <color name="contentBackground">#ECEFEF</color>
     <color name="actionIconColor">#ECEFEF</color>
 
+    <color name="previewBodyBackground">#FFFFFF</color>
+    <color name="previewTitleBackground">#454545</color>
+    <color name="previewTitleText">#ECEFEF</color>
+    <color name="previewTitleIcon">#ECEFEF</color>
+
 </resources>
