@@ -82,7 +82,7 @@ class MainActivity : BaseActivity() {
                 openSetting(providerType)
             }
             itemView.findViewById<TextView>(R.id.previewTitleView)
-                .setText(ProviderFactory.getNameByType(providerType))
+                .setText(R.string.h2os)
 
             // TODO 设置预览图像
         }

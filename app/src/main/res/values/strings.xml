@@ -4,4 +4,6 @@
     <string name="volume_service">音量模块服务</string>
     <string name="label_activity_blacklist">黑名单</string>
     <string name="label_activity_preferences">偏好设置</string>
+
+    <string name="h2os10">H₂OS 10</string>
 </resources>

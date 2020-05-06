@@ -14,4 +14,6 @@ interface VolumeController {
 
     fun changeVolume(type: StreamType, adjustType: AdjustType)
 
+    fun getDefaultType(): StreamType
+
 }

@@ -1,12 +1,10 @@
 package com.lollipop.volumemodule.util
 
 import android.content.Context
-import android.graphics.Color
-import android.view.View
-import android.view.ViewGroup
-import android.view.ViewManager
-import android.view.WindowManager
-import android.widget.TextView
+import android.util.TypedValue
+import android.view.*
+import android.widget.FrameLayout
+import com.lollipop.volumemodule.R
 import com.lollipop.volumemodule.provider.BaseProvider
 import com.lollipop.volumemodule.provider.ProviderController
 import com.lollipop.volumemodule.volume.StreamType
@@ -28,9 +26,25 @@ class ProviderHelper(private val context: Context,
     private var provider: BaseProvider? = null
     private var needUpdateLayout = false
 
+    init {
+        val emptyGroup = FrameLayout(context)
+        val view = LayoutInflater.from(context).inflate(R.layout.provider_h2os, emptyGroup, false)
+        view.findViewById<View>(R.id.changeBtn).setOnClickListener {
+            view.findViewById<View>(R.id.valueView).let {
+                it.visibility = if (it.visibility == View.VISIBLE) { View.GONE } else { View.VISIBLE }
+            }
+        }
+        val srcParams = view.layoutParams
+        val p = providerGroup.createParams() as WindowManager.LayoutParams
+        p.gravity = Gravity.LEFT
+        p.width = srcParams.width
+        p.height = srcParams.height
+        providerGroup.addView(view, p)
+    }
+
     override fun onVolumeChanged(type: StreamType) {
-        checkProvider()
-        provider?.onVolumeChanged(type)
+//        checkProvider()
+//        provider?.onVolumeChanged(type)
     }
 
     interface ProviderGroup: ViewManager {

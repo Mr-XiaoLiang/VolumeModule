@@ -84,4 +84,8 @@ class VolumeAccessibilityService : AccessibilityService(), VolumeController {
         audioManager.adjustStreamVolume(type.value, adjustType.value, 0)
     }
 
+    override fun getDefaultType(): StreamType {
+        return defaultStreamType()
+    }
+
 }
